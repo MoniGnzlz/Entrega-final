@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+	background-color: rgba(217, 215, 215, 0.915)
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgb(245, 245, 220);
+  color: rgb(48, 15, 2);
+  margin-bottom: 15px;
+}
+
+.logo {
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 5vh;
+}
+
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+ align-items:center;
+}
+
+.navbar-links a {
+  color:rgb(168, 118, 91);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.logueo {
+		position:relative;
+		margin-left:15px;
+
+	}
+	.logueo img{
+		border-radius:50%;
+	}
+	
+	.ingresodeusuario {
+		display:none;
+		position:absolute;
+		left:-10rem;
+		top:3rem;
+		background-color: #a84d4d;
+		min-width: 10rem;
+		padding: 12px 16px;
+		z-index: 1;
+		border: 1px solid black;
+		
+		
+	}
+	.ingresodeusuario.active {
+	display: block;	
+	}
+	.margen{
+		margin-bottom: 5px;
+		display: flex;
+		justify-content:center;
+	}
+
+.menuCostado {
+  display: none;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.encabezado-catalogo {
+    background-color: #388e3c;
+    color: white;
+    padding: 20px 80px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.encabezado-catalogo h2 {
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar .boton-cierre {
+  align-self: flex-end;
+  font-size: 20px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.carrito{
+	width:50px;
+}
+#cuenta-carrito{
+	background-color: red;
+	color:white;
+	border-radius:100%;
+	display:inline-block;
+	width: 20px;
+	line-height:20px;
+	aspect-ratio: 1;
+	text-align:center;
+	position:absolute;
+}
+.esconder{
+	display:none;
+}
+h3{
+    font-size: 2rem;
+    margin: 4rem 1rem 1rem 1rem;
+}
+.container-footer{
+    background-color: rgb(245, 245, 220);
+    box-shadow: 5px 5px 20px rgb(0, 0, 0);
+    padding: 1rem;
+    display: flex; 
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+	margin-top:24%;
+	position:sticky;
+	left: 0;
+	bottom: 0;
+	width:100%;
+}
+.container-footer h3{
+	margin-top: 5px;
+}
+.container-footer a svg{
+     width: 2em;
+    height: 2em;
+
+}
+.footer{
+    color: black;
+    padding: 1rem;
+    text-align: center;
+}
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container-formulario {
+	display:flex;
+	margin:auto;
+
+	justify-content:center;
+	width:90%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+ .inicio h1{
+	 text-align:center;
+	 padding: 15px 0px;
+	margin-bottom: 15px;
+ }
+ .inicio p{
+	 display:flex;
+	 text-align:center;
+	  padding: 15px 0px;
+	 font-size:25px;
+	 margin-bottom: 15px;
+ }
+ .inicio img{
+	 width: 100%;
+	 aspect-ratio:1.5;
+	 margin-bottom:-25%;
+ }
+ 
+ 
+
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Oculta menú en navbar */
+  }
+
+  .menuCostado {
+    display: block; /* Muestra ícono hamburguesa */
+  }
+  
+  .logueo {
+		position:relative;
+		display:inline-block;
+		left:225px;
+	}
+}
+
+.encabezado-catalogo {
+	position: absolute;
+	width:100%;
+    background-color: #388e3c;
+    color: white;
+    padding: 20px 80px;
+    margin-bottom: 30px;
+    margin-top: -15px;
+    text-align: left;
+	z-index: -1;
+}
+
+.encabezado-catalogo h2 {
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media (max-width: 992px) {
+    .encabezado-catalogo {
+        padding: 15px 40px;
+    }
+    .encabezado-catalogo h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .encabezado-catalogo {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+    .encabezado-catalogo h2 {
+        font-size: 1.5em;
+    }
